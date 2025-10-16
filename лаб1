@@ -1,0 +1,75 @@
+#1
+'''
+n=int(input('Введите число))
+s=0;p=1
+while n>0:
+    r=n%10
+    n=n//10
+    p=p*r
+    s=s+r
+if s%3==0 and p%5==0:print('Файл не повреждён')
+else:print('Файл повреждён')
+'''
+#2
+'''
+attempts = 0  
+
+def login(correct_password):
+    global attempts
+    password = input("Введите пароль: ")
+
+    if password == correct_password:
+        print("Вход выполнен успешно.")
+        attempts = 0  
+    else:
+        attempts += 1
+        print("Неверный пароль.")
+        if attempts % 3 == 0:
+            print("Аккаунт временно заблокирован.")
+        else:
+            print(f"Количество неудачных попыток: {attempts}")
+correct_password = "1234"
+
+while True:
+    login(correct_password)
+'''
+#3
+'''
+t=60
+u=int(input("Введите уровень угрозы (1–100): "))
+if u>t:
+    print("Уровень угрозы превышает порог.")
+elif u==t:
+    print("Уровень угрозы равен порогу.")
+elif u<=t-20:
+    print("Уровень угрозы меньше порога на 20 или более.")
+else:
+    print("Уровень угрозы ниже порога, но менее чем на 20.")
+'''
+#4
+z=["admin", "root", "superuser"]
+n=(input('Введите пароль'))
+if len(n)<8:print('длина не должна быть меньше 8')
+elif not any(c.isdigit() for c in n):print('пароль должен содержать хотя бы одну цыфру')
+elif n in z:print('пароль запрещен')
+else:print('пароль принят')#5.1
+'''
+x = int(input("Введите число: "))
+print("Двоичное представление:", bin(x))
+print("x & 1:", x & 1)
+print("x | 1:", x | 1)
+print("x ^ 1:", x ^ 1)
+print("x << 1:", x << 1)
+print("x >> 1:", x >> 1)
+if x & 1 == 0:print("Число чётное.")
+else:print("Число нечётное.")
+'''
+#5.2
+'''
+a = [1, 2, 3]
+b = [1, 2, 3]
+c = a
+print(a == b)
+print(a is b)
+print(a is c)
+'''
